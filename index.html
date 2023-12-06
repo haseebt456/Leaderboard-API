@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Leaderboard Project</title>
+</head>
+
+<body>
+    <div class='container'>
+        <div>
+            <h1>Leaderboard</h1>
+            <div>
+                <p>Recent Scores</p>
+                <button id='refresh'>Refresh</button>
+            </div>
+            <div id='leaderboard' class='leaderboard'></div>
+        </div>
+        <div>
+
+            <form>
+                <p>Add Your score</p>
+                <input type='text' id='name' placeholder='Your name' required>
+                <input type='text' id='score' placeholder='Your Score' required>
+                <input type='submit' id='submit' value='Submit'>
+                <p id='error' class='error'></p>
+            </form>
+
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

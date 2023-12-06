@@ -15,19 +15,22 @@ const sendData = async (data)=>{
     return response;
 };
 
-const addButton = document.getElementById('submit');
-addButton.addEventListener('click',async ()=>{
-    const nameValue= document.getElementById('name').value;
-    const scoreValue = document.getElementById('score').value;
+
+document.getElementById('input-data').addEventListener('submit',async (e)=>{
+    e.preventDefault();
+    let nameValue= document.querySelector('#name').value;
+    let scoreValue = document.querySelector('#score').value;
+    console.log(nameValue+" is being added with score "+scoreValue);
     let data = {
-        name: nameValue,
+        user: nameValue,
         score: scoreValue
     };
     let sc = await sendData(data);
     console.log(sc);
 })
 
-const mainFUnc = async ()=>{
+
+/* const mainFUnc = async ()=>{
     let data = {
         user : "haseeb",
         score: "20"
@@ -35,5 +38,4 @@ const mainFUnc = async ()=>{
     let res = await sendData(data);
     console.log(res);
 }
-
-mainFUnc();
+ */

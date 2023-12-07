@@ -47,3 +47,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .head {
+    font-size: 25px;
+  }

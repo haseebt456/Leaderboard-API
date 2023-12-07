@@ -26,6 +26,10 @@ const scorecard = document.querySelector('.leaderboard');
 const render = async ()=>{
     scorecard.innerHTML = '';
     const data = await getData();
+    scorecard.innerHTML =  `<tr>
+    <td class = "head">Name</td>
+    <td class = "head">Score</td>
+</tr>`;
     const list = data.map((item)=>{
         const tr = document.createElement('tr');
                 const td1 = document.createElement('td');

@@ -4,10 +4,14 @@ body {
   
   .leaderboard {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 300px;
   }
-  
+  tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
   ul {
     list-style: none;
     width: 100%;

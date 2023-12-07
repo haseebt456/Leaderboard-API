@@ -45,21 +45,6 @@ const render = async ()=>{
 }
 
 
-/* 
-document.getElementById('input-data').addEventListener('submit',async (e)=>{
-    e.preventDefault();
-    let nameValue= document.querySelector('#name').value;
-    let scoreValue = document.querySelector('#score').value;
-    console.log(nameValue+" is being added with score "+scoreValue);
-    let data = {
-        user: nameValue,
-        score: scoreValue
-    };
-    let sc = await sendData(data);
-    console.log(sc);
-})
- */
-
 document.addEventListener('DOMContentLoaded', () => {
     // Add event listeners to the buttons
     document.querySelector('#refresh').addEventListener('click', async () => { render(); });
@@ -75,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     let sc = await sendData(data);
     console.log(sc);
+    render();
     });
   
     render();

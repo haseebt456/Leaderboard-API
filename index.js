@@ -15,6 +15,13 @@ const sendData = async (data)=>{
     return response;
 };
 
+const getData = async ()=>{
+    await fetch(urlg,).then((response)=>{
+        response.json();
+    }).then((DATA)=>{
+        return DATA.result;
+})
+};
 
 document.getElementById('input-data').addEventListener('submit',async (e)=>{
     e.preventDefault();
@@ -29,7 +36,12 @@ document.getElementById('input-data').addEventListener('submit',async (e)=>{
     console.log(sc);
 })
 
+const displayScore = async ()=>{
+    const score = await getData();
+    console.log(score);
+}
 
+displayScore();
 /* const mainFUnc = async ()=>{
     let data = {
         user : "haseeb",

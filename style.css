@@ -35,6 +35,9 @@ body {
   h1 {
     display: flex;
     justify-content: center;
+    color: green;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .error {
@@ -49,5 +52,15 @@ body {
   }
 
   .head {
-    font-size: 25px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .name {
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .score {
+    color: red;
+    font-size: larger;
   }

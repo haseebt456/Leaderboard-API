@@ -36,6 +36,8 @@ const render = async ()=>{
                 const td2 = document.createElement('td');
                 td1.innerHTML = item.user;
                 td2.innerHTML = item.score;
+                td1.setAttribute('class','name');
+                td2.setAttribute('class','score')
                 tr.appendChild(td1);
                 tr.appendChild(td2);
                 scorecard.appendChild(tr);

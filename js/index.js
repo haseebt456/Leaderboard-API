@@ -1,5 +1,6 @@
 const urlg = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/IemWo1301q86738Ytc1D/scores/";
 
+//Post method
 const sendData = async (data)=>{
 
     let options = {
@@ -15,6 +16,7 @@ const sendData = async (data)=>{
     return response;
 };
 
+//get method
 const getData = async ()=>{
     let p = await fetch(urlg);
     let response = await p.json();
@@ -23,6 +25,8 @@ const getData = async ()=>{
 
 const scorecard = document.querySelector('.leaderboard');
 
+
+//rendering data to DOM
 const render = async ()=>{
     scorecard.innerHTML = '';
     const data = await getData();
@@ -44,7 +48,7 @@ const render = async ()=>{
         })
 }
 
-
+//adding event listener
 document.addEventListener('DOMContentLoaded', () => {
     // Add event listeners to the buttons
     document.querySelector('#refresh').addEventListener('click', async () => { render(); });

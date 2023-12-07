@@ -17,7 +17,9 @@ const sendData = async (data)=>{
 
 const getData = async ()=>{
     let p = await fetch(urlg);
-    let res = p.json();
-    return res.result;
+    let response = await p.json();
+    return response.result;
 }
+
+export {sendData,getData};
 
